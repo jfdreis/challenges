@@ -68,18 +68,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
- 
-
-        #  while is_counter_contained(char_count_t, char_count_window):
-        #     if right - left + 1 < len(ans):
-        #         ans = s[left:right+1]
-        #     char_count_window[s[left]] -= 1
-        #     if char_count_window[s[left]] == 0:
-        #         del char_count_window[s[left]]
-        #     left += 1
-
-
-
-
-
