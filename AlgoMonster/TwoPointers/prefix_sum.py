@@ -24,6 +24,18 @@ def prefix_sum_array_target(arr: list[int],target: int) -> list[int]:
         prefix_sums[cur_sum] = i + 1
     return []
 
+def number_of_subarrays_target(arr: list[int],target: int) -> list[int]:
+    prefix_sums = {0: 1} # key = summed value up , value = frequency that sum occured 
+    number_of_subarrays = 0
+    cur_sum = 0
+    for i in range(len(arr)):
+        cur_sum += arr[i]
+        complement = cur_sum - target
+        if complement in prefix_sums:
+            number_of_subarrays += prefix_sums[complement]
+        prefix_sums[cur_sum] += 1
+    return []
+
 def main():
     examples = [
         ([1, -20, -3, 30, 5, 4],7),
