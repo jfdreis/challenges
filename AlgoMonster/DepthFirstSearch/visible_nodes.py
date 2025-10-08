@@ -40,7 +40,7 @@ https://leetcode.com/problems/count-good-nodes-in-binary-tree/
 
 
 from collections import deque
-from typing import Optional, List
+from typing import Optional
 
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -48,7 +48,7 @@ class TreeNode:
         self.left = left
         self.right = right
 
-def build_tree(values: List[Optional[int]]) -> Optional[TreeNode]:
+def build_tree(values: list[Optional[int]]) -> Optional[TreeNode]:
     if not values or values[0] is None:
         return None
 
