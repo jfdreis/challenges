@@ -61,15 +61,16 @@ def build_tree(values: list[Optional[int]]) -> Optional[TreeNode]:
 
     return root
 
+def equal_trees(root: Optional[TreeNode], subRoot: Optional[TreeNode]) -> bool:
+    if root is None and subRoot is None:
+        return True
+    if root and subRoot and root.val == subRoot.val:
+        left_equal = equal_trees(root.left, subRoot.left)
+        right_equal = equal_trees(root.right, subRoot.right)
+        return left_equal and right_equal
+    return False
+
 def isSubtree(root: Optional[TreeNode], subRoot: Optional[TreeNode]) -> bool:
-    def equal_trees(root: Optional[TreeNode], subRoot: Optional[TreeNode]) -> bool:
-        if root is None and subRoot is None:
-            return True
-        if root and subRoot and root.val == subRoot.val:
-            left_equal = equal_trees(root.left, subRoot.left)
-            right_equal = equal_trees(root.right, subRoot.right)
-            return left_equal and right_equal
-        return False
     if subRoot is None:
         return True
     if root is None:
