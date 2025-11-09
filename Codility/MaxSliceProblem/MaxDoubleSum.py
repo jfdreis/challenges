@@ -75,7 +75,7 @@ class Solution:
         return max_double_slice
 
 def main():
-    arr = [[3, 2, -6, 4, 0],[-2,-10]]
+    arr = [[3,2,6,-1,4,5,-1,2]]
     for value in arr:
         print(f'The maximum sum of slice is {Solution().max_slice_sum(value)}')
 
