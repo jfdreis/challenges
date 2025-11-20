@@ -120,7 +120,7 @@ mod tests {
                 let result = func(&input);
                 assert_eq!(
                     result, *expected,
-                    "Function {} falide for input {:?}",
+                    "Function {} failed for input {:?}",
                     name, input
                 );
             }
